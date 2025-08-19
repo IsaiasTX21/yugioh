@@ -81,7 +81,7 @@ export default function App() {
   }
 
 
-  if (idsaved.length % 14 == 0 && idsaved.length > 0) {
+  if (idsaved.length % 16 == 0 && idsaved.length > 0) {
     setdeck((prev) => prev.map((items) => idsaved.length % 14 == 0 && idsaved.length > 0 ? { ...items, back: cardback, front: items.front } : items))
     setidsaved((prev) => prev.slice(0, 0))
     setalert(true)
@@ -101,10 +101,10 @@ export default function App() {
     return (
       <div style={{ backgroundImage: `url(${yugioh})`, minHeight: "100vh", width: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
 
-        <Alert className="text-center d-flex flex-column " style={{ backgroundColor: "#792DBC", width: "80%", height: "100px" }} >
+        <Alert className="text-center d-flex flex-column " style={{ backgroundColor: "#792DBC", width: "80%", height: "140px" }} >
           <Alert.Heading className="text-white"> Parabéns, você venceu essa partida.</Alert.Heading>
 
-          <div className="d-flex  justify-content-center align-items-center">  <p className="p-0 m-0 text-white">
+          <div className="d-flex  justify-content-center align-items-center">  <p className="p-0 mt-3 text-white">
             Está preparado para Jogar outra vez?
           </p>  <button onClick={() => setalert(false)} style={{ fontSize: "12px" }} className=" btn btn-primary ms-2">Jogar</button>  <button style={{ fontSize: "12px" }} className=" ms-2 btn btn-danger">Desistir</button></div>
 
