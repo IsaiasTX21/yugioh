@@ -1,15 +1,39 @@
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
-  color: #213547;
-  background-color: #ffffff;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+*{
+padding: 0px;
+margin: 0px;
+box-sizing: border-box;
 }
+
+#container{
+min-height: 100vh;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+gap: 10px;
+margin: auto;
+background-size: cover;
+}
+
+.card{
+height: 200px;
+width: 150px;
+
+}
+
+img{
+height: 100%;
+width: 150px;
+}
+
+@media screen and (width < 500px){
+.card{
+height: 100px;
+width: 70px;
+}
+
+img{
+height: 100%;
+width: 100%;
+}}
